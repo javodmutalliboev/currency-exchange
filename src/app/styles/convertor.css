@@ -1,3 +1,63 @@
 #ict1 {
   margin-top: 40px;
+  height: calc(100vh - 80px);
+}
+
+#ict1 div {
+  display: grid;
+  margin: 4px;
+  min-width: 180px;
+  padding: 4px;
+}
+
+#ict1 form > div > div {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #aaa;
+  width: fit-content;
+}
+
+#ict1 form > div > div > div {
+  display: flex;
+  flex-direction: row;
+}
+
+#ict1 form > div {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#ict1 form {
+  height: 100%;
+}
+
+#ict1 form > div {
+  height: 100%;
+}
+
+#ict1 form select,
+#ict1 form input {
+  border: 1px solid #aaa;
+  width: 180px;
+}
+
+#ict1 form button[type="submit"] {
+  background-color: #333;
+  border-radius: 4px;
+  height: 30px;
+  margin-top: 20px;
+  color: white;
+}
+
+@media only screen and (max-width: 810px) {
+  #ict1 form > div > div > div {
+    flex-direction: column;
+  }
+
+  #ict1 form button[type="submit"] {
+    margin-top: 0;
+  }
 }

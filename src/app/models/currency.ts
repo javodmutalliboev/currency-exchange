@@ -1,13 +1,10 @@
 interface Currency {
-  meta: {
-    last_updated_at: string;
+  base: string;
+  ms: number;
+  results: {
+    [key: string]: number;
   };
-  data: {
-    [key: string]: {
-      code: string;
-      value: number;
-    };
-  };
+  updated: string;
 }
 
 export type { Currency };

@@ -9,7 +9,7 @@ export default function Header() {
   return (
     <div id="i1">
       <div className={`link ${pathname === "/" ? "tab active" : "tab"}`}>
-        <Link href="/" as={""}>
+        <Link href="/" as={"/"}>
           Converter
         </Link>
       </div>

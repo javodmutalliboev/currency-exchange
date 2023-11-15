@@ -1,19 +1,15 @@
 #ic1 {
-  height: 100vh;
   margin-top: 40px;
 }
 
 #ic2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #ic3 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 #ic2 select {
@@ -21,4 +17,16 @@
   border-radius: 4px;
   min-width: 400px;
   height: 32px;
+}
+
+@media only screen and (max-width: 440px) {
+  #ic2 select {
+    min-width: 250px;
+  }
+}
+
+#ic2 select:focus {
+  outline: none;
+  border-color: #aaa;
+  box-shadow: 0 0 0 4px rgb(170, 213, 255);
 }
