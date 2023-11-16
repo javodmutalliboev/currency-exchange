@@ -6,7 +6,7 @@ import { Currency } from "../models/currency";
 export default function Converter() {
   const getCurrencies = () => {
     return fetch(
-      "https://api.fastforex.io/fetch-multi?from=USD&to=USD,RUB,EUR,UZS,CNY,JPY,KZT,TJS&api_key=632a2646ba-d39ea6c572-s3stj3"
+      "https://api.fastforex.io/fetch-multi?from=USD&to=USD,RUB,EUR,UZS,CNY,JPY,KZT,TJS&api_key=d5bf3285fa-3fa18cf4ae-s47dsn"
     ).then((res) => res.json());
   };
 
