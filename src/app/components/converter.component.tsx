@@ -96,7 +96,7 @@ export default function Converter() {
                 <label htmlFor="amount">Amount</label>
                 <input
                   onChange={handleAmount}
-                  defaultValue={amount}
+                  value={amount}
                   required
                   type="number"
                   step={0.01}
