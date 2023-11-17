@@ -10,8 +10,8 @@ export default function Converter() {
     ).then((res) => res.json());
   };
 
-  const [from, setFrom] = useState("USD");
-  const [to, setTo] = useState("EUR");
+  const [from, setFrom] = useState<string>();
+  const [to, setTo] = useState<string>();
   const [amount, setAmount] = useState(1.0);
   const [result, setResult] = useState(0.0);
   const [initialState, setInitialSet] = useState<Currency>();
@@ -34,12 +34,16 @@ export default function Converter() {
     optionList.current = dataKeys.current.map((ky) => (
       <option key={ky}>{ky}</option>
     ));
+    if (dataKeys.current.length > 0) {
+      setFrom("USD");
+      setTo("EUR");
+    }
   }, [initialState]);
 
   const handleSubmit = (event: any) => {
     event.preventDefault();
     const result =
-      (amount * initialState?.results[to]!) / initialState?.results[from]!;
+      (amount * initialState?.results[to!]!) / initialState?.results[from!]!;
     setResult(Number(result.toFixed(2)));
   };
 
